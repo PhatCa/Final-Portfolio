@@ -1,0 +1,42 @@
+.btn-custom-blue{
+  display:inline-block;
+  position:relative;
+  background: #262F48;
+  padding: 10px 52px;
+  text-decoration: none;
+  color: $primary;
+  border-radius: 8px;
+  transition:all 0.3s;
+  z-index: 1;
+  overflow: hidden;
+  border:none;
+  
+  &:before{
+    content:"";
+    transition: all 0.3s;
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    background: $primary;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0);
+    z-index:-1;
+  }
+
+  &:hover{
+    color: white;
+
+    &:before{
+      transform: translate(-50%, -50%) scale(2);
+
+    }
+  }
+}
+
+.btn-custom-dark{
+  @extend .btn-custom-blue;
+  background: $secondary
+}

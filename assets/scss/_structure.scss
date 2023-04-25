@@ -1,0 +1,40 @@
+main {
+  padding-left: 102px;
+
+  > section {
+    display: none;
+    padding-right: 32px;
+    padding-left: 32px;
+
+    &:not(#home) {
+      padding-top: 64px;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    header.custom {
+      text-align: center;
+      position: relative;
+      margin-bottom: 42px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: $secondary;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+      }
+      h2 {
+        display: inline-block;
+        padding: 0 24px;
+        background: $dark_bg;
+      }
+    }
+  }
+}
